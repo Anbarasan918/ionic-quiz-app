@@ -1,0 +1,13 @@
+<ion-content slot="start">
+<form>
+  <h1>Answer The Questions</h1>
+
+  {{showquesion.id}}<label>{{showquesion.question}}</label>
+    <ion-item *ngFor="let option of showquesion.options" >
+  <input value={{option}} type="radio" name="answer" [(ngModel)]="showquesion.useranswer"/>{{option}} 
+  </ion-item>
+<ion-button (click)="previousquestion()"  class="btn btn-primary" *ngIf="showquesion.id!=1">PREVIOUS</ion-button>
+<ion-button (click)="nextquestion()"  class="btn btn-primary" *ngIf="showquesion.id!=5"> NEXT</ion-button>
+<ion-button (click)="summitData()" class="btn btn-primary" *ngIf="showquesion.id==5">SUBMMIT</ion-button>
+</form>
+</ion-content>
