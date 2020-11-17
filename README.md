@@ -1,1 +1,1 @@
-This project is done by a useless idiot.
+QuizApp for students.
